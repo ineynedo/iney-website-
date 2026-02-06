@@ -1,0 +1,80 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "testimonials": "Testimonials",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "INEY",
+        "subtitle": "Premium Digital Agency",
+        "description": "Innovative digital solutions to propel your business into the future",
+        "cta": "Discover our services",
+        "ctaSecondary": "Contact us"
+    },
+    "services": {
+        "title": "Our Services",
+        "subtitle": "Complete solutions for your digital transformation",
+        "marketing": {
+            "title": "Digital Marketing",
+            "description": "Tailored marketing strategies to maximize your online visibility and convert prospects into loyal customers."
+        },
+        "webapp": {
+            "title": "Web Applications",
+            "description": "Development of modern, high-performance, and scalable web applications tailored to your specific needs."
+        },
+        "automation": {
+            "title": "Automation",
+            "description": "Automate your business processes to gain efficiency and reduce repetitive tasks."
+        },
+        "crm": {
+            "title": "CRM Solutions",
+            "description": "Customized customer management systems to optimize your relationships and boost your sales."
+        }
+    },
+    "portfolio": {
+        "title": "Our Portfolio",
+        "subtitle": "Discover our work and test them live",
+        "categories": {
+            "all": "All",
+            "websites": "Websites",
+            "apps": "Applications",
+            "videos": "Videos"
+        },
+        "viewDemo": "View demo",
+        "viewProject": "View project"
+    },
+    "testimonials": {
+        "title": "Client Testimonials",
+        "subtitle": "What our clients say about us"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Ready to start your project? Let's talk!",
+        "form": {
+            "name": "Full name",
+            "email": "Email",
+            "phone": "Phone",
+            "service": "Desired service",
+            "message": "Your message",
+            "submit": "Send",
+            "sending": "Sending...",
+            "success": "Message sent successfully!",
+            "error": "An error occurred. Please try again."
+        },
+        "services": {
+            "marketing": "Digital Marketing",
+            "webapp": "Web Application",
+            "automation": "Automation",
+            "crm": "CRM Solution",
+            "other": "Other"
+        }
+    },
+    "footer": {
+        "description": "Digital agency specialized in digital marketing and innovative solutions.",
+        "quickLinks": "Quick links",
+        "followUs": "Follow us",
+        "rights": "All rights reserved."
+    }
+}

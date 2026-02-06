@@ -1,0 +1,80 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "testimonials": "Témoignages",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "INEY",
+        "subtitle": "Agence Digitale Premium",
+        "description": "Solutions digitales innovantes pour propulser votre entreprise vers le futur",
+        "cta": "Découvrir nos services",
+        "ctaSecondary": "Nous contacter"
+    },
+    "services": {
+        "title": "Nos Services",
+        "subtitle": "Des solutions complètes pour votre transformation digitale",
+        "marketing": {
+            "title": "Marketing Digital",
+            "description": "Stratégies marketing sur mesure pour maximiser votre visibilité en ligne et convertir vos prospects en clients fidèles."
+        },
+        "webapp": {
+            "title": "Applications Web",
+            "description": "Développement d'applications web modernes, performantes et évolutives adaptées à vos besoins spécifiques."
+        },
+        "automation": {
+            "title": "Automation",
+            "description": "Automatisation de vos processus métier pour gagner en efficacité et réduire les tâches répétitives."
+        },
+        "crm": {
+            "title": "Solutions CRM",
+            "description": "Systèmes de gestion client personnalisés pour optimiser vos relations et booster vos ventes."
+        }
+    },
+    "portfolio": {
+        "title": "Notre Portfolio",
+        "subtitle": "Découvrez nos réalisations et testez-les en direct",
+        "categories": {
+            "all": "Tout",
+            "websites": "Sites Web",
+            "apps": "Applications",
+            "videos": "Vidéos"
+        },
+        "viewDemo": "Voir la démo",
+        "viewProject": "Voir le projet"
+    },
+    "testimonials": {
+        "title": "Témoignages Clients",
+        "subtitle": "Ce que nos clients disent de nous"
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Prêt à démarrer votre projet ? Parlons-en !",
+        "form": {
+            "name": "Nom complet",
+            "email": "Email",
+            "phone": "Téléphone",
+            "service": "Service souhaité",
+            "message": "Votre message",
+            "submit": "Envoyer",
+            "sending": "Envoi en cours...",
+            "success": "Message envoyé avec succès !",
+            "error": "Une erreur s'est produite. Veuillez réessayer."
+        },
+        "services": {
+            "marketing": "Marketing Digital",
+            "webapp": "Application Web",
+            "automation": "Automation",
+            "crm": "Solution CRM",
+            "other": "Autre"
+        }
+    },
+    "footer": {
+        "description": "Agence digitale spécialisée dans le marketing digital et les solutions innovantes.",
+        "quickLinks": "Liens rapides",
+        "followUs": "Suivez-nous",
+        "rights": "Tous droits réservés."
+    }
+}
