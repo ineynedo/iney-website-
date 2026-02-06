@@ -322,9 +322,10 @@ body {
   cursor: pointer;
 }
 
-background: #554D75;
-color: #F2EFEA;
-transform: translateY(-2px);
+.btn-secondary:hover {
+  background: #554D75;
+  color: #F2EFEA;
+  transform: translateY(-2px);
 }
 
 /* Autofill Override - Force dark background */
