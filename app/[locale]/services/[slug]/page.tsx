@@ -121,8 +121,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function ServicePage({ params }: { params: { slug: string; locale: string } }) {
-    const service = servicesData[params.slug as keyof typeof servicesData];
+export default async function ServicePage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+    const { slug } = await params;
+    const service = servicesData[slug as keyof typeof servicesData];
 
     if (!service) {
         notFound();
