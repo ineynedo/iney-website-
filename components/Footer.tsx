@@ -28,6 +28,12 @@ export default function Footer() {
                         >
                             contact@iney.ma
                         </a>
+                        <a
+                            href="tel:+212707102005"
+                            className="text-lg text-white/80 hover:text-white transition-colors block mb-4"
+                        >
+                            07 07 10 20 05
+                        </a>
                         <div className="flex gap-3 justify-center md:justify-end">
                             {socialLinks.map((social) => (
                                 <a
