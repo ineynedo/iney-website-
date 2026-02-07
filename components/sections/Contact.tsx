@@ -52,7 +52,7 @@ export default function Contact() {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-white/70"
                     >
-                        Quelques infos suffisent pour que je revienne vers vous avec des pistes concrètes.
+                        Quelques infos suffisent pour que nous revenions vers vous avec des pistes concrètes.
                     </motion.p>
                 </div>
 
@@ -70,8 +70,8 @@ export default function Contact() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                 </svg>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-3">Merci, j’ai bien reçu votre projet.</h3>
-                            <p className="text-white/70">Je reviens vers vous très vite.</p>
+                            <h3 className="text-2xl font-bold text-white mb-3">Merci, nous avons bien reçu votre projet.</h3>
+                            <p className="text-white/70">Nous revenons vers vous très vite.</p>
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-8">
@@ -156,7 +156,7 @@ export default function Contact() {
                             {/* Message */}
                             <div className="space-y-2">
                                 <label className="block text-sm font-medium text-white/90">
-                                    Parlez-moi de votre projet <span className="text-purple-vibrant">*</span>
+                                    Parlez-nous de votre projet <span className="text-purple-vibrant">*</span>
                                 </label>
                                 <textarea
                                     name="message"
