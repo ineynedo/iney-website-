@@ -8,7 +8,6 @@ export default function Contact() {
         fullName: '',
         email: '',
         phone: '',
-        phone: '',
         projectType: '',
         projectTypeOther: '',
         message: ''
@@ -130,77 +129,84 @@ export default function Contact() {
                                 <label className="block text-sm font-medium text-white/90">
                                     Type de projet <span className="text-purple-vibrant">*</span>
                                 </label>
-                                <div className="relative">
-                                    <select
-                                        name="projectType"
-                                        value={formData.projectType}
-                                        onChange={handleInputChange}
-                                        required
-                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-vibrant focus:ring-1 focus:ring-purple-vibrant transition-all appearance-none cursor-pointer"
-                                    >
-                                        <option value="" disabled className="bg-neutral-900 text-white/50">Sélectionnez une option</option>
-                                        <option value="vitrine" className="bg-neutral-900">Site vitrine</option>
-                                        <option value="ecommerce" className="bg-neutral-900">E-commerce</option>
-                                        <option value="saas" className="bg-neutral-900">SaaS / Web app</option>
-                                        <option value="mobile" className="bg-neutral-900">Application mobile</option>
-                                        <option value="branding" className="bg-neutral-900">Branding / identité visuelle</option>
-                                        <option value="marketing" className="bg-neutral-900">Marketing / acquisition</option>
-                                        <option value="autre" className="bg-neutral-900">Autre</option>
-                                    </select>
-                                </div>
-                                {formData.projectType === 'autre' && (
-                                    <motion.div
-                                        initial={{ opacity: 0, height: 0 }}
-                                        animate={{ opacity: 1, height: 'auto' }}
-                                        className="mt-3"
-                                    >
-                                        <input
-                                            type="text"
-                                            name="projectTypeOther"
-                                            value={formData.projectTypeOther}
+                                <div className="space-y-3">
+                                    <div className="relative">
+                                        <select
+                                            name="projectType"
+                                            value={formData.projectType}
                                             onChange={handleInputChange}
-                                            placeholder="Précisez votre type de projet..."
-                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-purple-vibrant focus:ring-1 focus:ring-purple-vibrant transition-all"
-                                        />
-                                    </motion.div>
-                                )}
+                                            required
+                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-purple-vibrant focus:ring-1 focus:ring-purple-vibrant transition-all appearance-none cursor-pointer"
+                                        >
+                                            <option value="" disabled className="bg-neutral-900 text-white/50">Sélectionnez une option</option>
+                                            <option value="vitrine" className="bg-neutral-900">Site vitrine</option>
+                                            <option value="ecommerce" className="bg-neutral-900">E-commerce</option>
+                                            <option value="saas" className="bg-neutral-900">SaaS / Web app</option>
+                                            <option value="mobile" className="bg-neutral-900">Application mobile</option>
+                                            <option value="branding" className="bg-neutral-900">Branding / identité visuelle</option>
+                                            <option value="marketing" className="bg-neutral-900">Marketing / acquisition</option>
+                                            <option value="autre" className="bg-neutral-900">Autre</option>
+                                        </select>
+                                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-white/50">
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    {formData.projectType === 'autre' && (
+                                        <motion.div
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{ opacity: 1, height: 'auto' }}
+                                            exit={{ opacity: 0, height: 0 }}
+                                        >
+                                            <input
+                                                type="text"
+                                                name="projectTypeOther"
+                                                value={formData.projectTypeOther}
+                                                onChange={handleInputChange}
+                                                placeholder="Précisez votre type de projet..."
+                                                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-purple-vibrant focus:ring-1 focus:ring-purple-vibrant transition-all"
+                                            />
+                                        </motion.div>
+                                    )}
+                                </div>
                             </div>
-                        </div>
 
                             {/* Message */}
-                    <div className="space-y-2">
-                        <label className="block text-sm font-medium text-white/90">
-                            Parlez-nous de votre projet <span className="text-purple-vibrant">*</span>
-                        </label>
-                        <textarea
-                            name="message"
-                            value={formData.message}
-                            onChange={handleInputChange}
-                            required
-                            rows={5}
-                            placeholder="Présentez rapidement votre activité, ce que vous voulez mettre en place (site, app, marketing…) et le résultat que vous visez."
-                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-purple-vibrant focus:ring-1 focus:ring-purple-vibrant transition-all resize-none"
-                        />
-                    </div>
+                            <div className="space-y-2">
+                                <label className="block text-sm font-medium text-white/90">
+                                    Parlez-nous de votre projet <span className="text-purple-vibrant">*</span>
+                                </label>
+                                <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleInputChange}
+                                    required
+                                    rows={5}
+                                    placeholder="Présentez rapidement votre activité, ce que vous voulez mettre en place (site, app, marketing…) et le résultat que vous visez."
+                                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-white/30 focus:outline-none focus:border-purple-vibrant focus:ring-1 focus:ring-purple-vibrant transition-all resize-none"
+                                />
+                            </div>
 
-                    {/* Bouton */}
-                    <div className="pt-4 flex flex-col items-center">
-                        <button
-                            type="submit"
-                            disabled={isSubmitting}
-                            className="w-full sm:w-auto px-12 py-4 bg-purple-vibrant text-white font-bold text-lg rounded-lg hover:bg-purple-600 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-purple-vibrant/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                        >
-                            {isSubmitting ? 'Envoi...' : 'Envoyer mon projet'}
-                        </button>
-                        <p className="mt-4 text-xs text-white/40 text-center">
-                            Réponse sous 24h, sans blabla inutile.
-                        </p>
-                    </div>
+                            {/* Bouton */}
+                            <div className="pt-4 flex flex-col items-center">
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="w-full sm:w-auto px-12 py-4 bg-purple-vibrant text-white font-bold text-lg rounded-lg hover:bg-purple-600 hover:scale-105 active:scale-95 transition-all shadow-lg shadow-purple-vibrant/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    {isSubmitting ? 'Envoi...' : 'Envoyer mon projet'}
+                                </button>
+                                <p className="mt-4 text-xs text-white/40 text-center">
+                                    Réponse sous 24h, sans blabla inutile.
+                                </p>
+                            </div>
 
-                </form>
+                        </form>
                     )}
-            </motion.div>
-        </div>
-        </section >
+                </motion.div>
+            </div>
+        </section>
     );
 }
