@@ -25,11 +25,29 @@ export default function Contact() {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulation d'envoi API
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-        setIsSubmitted(true);
-        setIsSubmitting(false);
+            const data = await response.json();
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                alert('Une erreur est survenue. Veuillez réessayer.');
+                console.error(data.error);
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+            alert('Erreur de connexion. Veuillez vérifier votre connexion internet.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
