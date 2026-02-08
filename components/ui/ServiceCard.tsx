@@ -32,7 +32,10 @@ export default function ServiceCard({ title, description, expertise, slug, icon:
             <Link href={`/${locale}/services/${slug}`}>
                 <div className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
                     {/* Front Face */}
-                    <div className="absolute inset-0 backface-hidden">
+                    <div
+                        className="absolute inset-0 backface-hidden"
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                    >
                         <div className="h-full flex flex-col items-center justify-center text-center p-8 glass glass-hover rounded-xl group cursor-pointer">
                             <div className="w-20 h-20 mb-6 text-white group-hover:scale-110 transition-transform">
                                 <IconComponent />
@@ -47,8 +50,11 @@ export default function ServiceCard({ title, description, expertise, slug, icon:
                     </div>
 
                     {/* Back Face */}
-                    <div className="absolute inset-0 backface-hidden rotate-y-180">
-                        <div className="h-full flex flex-col justify-center p-8 glass-active rounded-xl cursor-pointer">
+                    <div
+                        className="absolute inset-0 backface-hidden rotate-y-180"
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                    >
+                        <div className="h-full flex flex-col justify-center p-8 glass-active rounded-xl cursor-pointer" style={{ backgroundColor: 'rgba(30,30,30,0.95)' }}>
                             <h3 className="text-xl font-bold text-white mb-4 text-center">
                                 Notre Expertise
                             </h3>

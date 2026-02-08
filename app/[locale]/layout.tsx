@@ -4,6 +4,19 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import '../globals.css';
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'INEY Agency - Agence Digitale & Créative',
+    description: 'Agence digitale spécialisée dans la transformation numérique, le design et le développement web.',
+    icons: {
+        icon: '/favicon.png',
+        shortcut: '/favicon.png',
+        apple: '/favicon.png',
+    },
+};
+
 export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }

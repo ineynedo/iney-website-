@@ -6,17 +6,24 @@ export default function Hero() {
     return (
         <section id="accueil" className="relative min-h-screen pt-20 flex items-center justify-center overflow-hidden">
             {/* Video Background */}
+            {/* Video Background */}
             <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 preload="auto"
+                poster="/hero-poster.jpg"
                 className="absolute inset-0 w-full h-full object-cover"
                 key="hero-video"
+                disablePictureInPicture
             >
                 <source src="/hero-video.mp4?v=2" type="video/mp4" />
-                Your browser does not support the video tag.
+                <img
+                    src="/hero-poster.jpg"
+                    alt="Background"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
             </video>
 
             {/* Subtle overlay for text readability */}
